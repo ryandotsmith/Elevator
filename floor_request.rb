@@ -12,5 +12,4 @@ class FloorRequest
   def up?
     self.direction == 'up'
   end
-
 end
