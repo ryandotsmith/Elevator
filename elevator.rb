@@ -42,7 +42,7 @@ class Elevator
   def run
     while(true) do
       rand(1).zero? ? direction = 'up' : direction = 'down'
-      self.floor_requests << FloorRequest.new({:floor => rand(10), :direstion => direction})
+      self.floor_requests << FloorRequest.new({:floor => rand(10), :direction => direction})
       self.work((1..10).to_a.sort_by { rand }[0..4] )
     end
   end
