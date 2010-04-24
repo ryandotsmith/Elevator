@@ -30,6 +30,7 @@ class Elevator
       destination = @destinations.delete_at(0)
       puts "visiting #{destination}"
     end
+    @floor_requests.delete_at(0)
   end
 
   def run
