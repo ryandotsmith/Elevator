@@ -9,6 +9,8 @@ class Elevator
     @destinations   = []
   end
 
+  # when people press buttons inside the elevator
+  # they are adding destinations
   def add_destinations(floors)
     @destinations << floors 
     @destinations.flatten!
@@ -24,6 +26,10 @@ class Elevator
     @floor_requests.first 
   end
 
+  # we will take people to their destinations 
+  # and after we reach the final destination we
+  # will complete the floor request by removing it 
+  # from the elevators floor request queue
   def work(destinations)
     add_destinations(destinations)
     until @destinations.empty? do 
